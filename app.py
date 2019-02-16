@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import Dictionaries
 app = Flask(__name__)
 
 
@@ -9,7 +10,8 @@ def home():
 @app.route('/findagency', methods=['POST'])
 def findagency():
     agency = request.form['agency']
-    print(agency)
+    components = Dictionaries.getComponents(agency)
+    print(components)
     return render_template('home.html')
 
 if __name__ == '__main__':
