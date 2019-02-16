@@ -3,13 +3,38 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Flask Tutorial</title>
+    <title>Friendly FOIA</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 
 <body>
-    <h1> My First Try Using Flask </h1>
-    <p> Flask is Fun </p>
+    <h1>Need to submit a FOIA Request?</h1>
+    <h4>Friendly FOIA is here to help!</h4>
+
+    <form action="report.php" method="POST">
+        Request category: <input type="text" name="situation"><br>
+        Request description: <input type="text" name="situation"><br>
+        Attachments: <input type="text" name="desc"><br>
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+        Address, Line 1: <input type="text" name="addr1"><br>
+        Address, Line 2: <input type="text" name="addr2"><br>
+        City: <input type="text" name="city"><br>
+        State/Province: <input type="text" name="state"><br>
+        Country: <input type="text" name="country"><br>
+        ZIP/Postal Code: <input type="text" name="zip"><br>
+        Company/Organization: <input type="text" name="company"><br>
+        Phone number: <input type="text" name="phone"><br>
+        Email: <input type="text" name="email"><br>
+        Fax Number: <input type="text" name="fax"><br>
+        Amount you are willing to pay: <input type="text" name="amount"><br>
+        Expedited Processing: <input type="text" name="expedited"><br>
+        Expedited Processing Explanation: <input type="text" name="expreditedexp"><br>
+        Fee waiver: <input type="text" name="waivertype"><br>
+        Fee waiver explanation: <input type="text" name="waiverexp"><br>
+        <input type="submit" value="Submit FOIA">
+    </form>
+
 </body>
 
 </html>
