@@ -1,3 +1,5 @@
+import requests
+
 def doForm(id):
 	headers = {
 		'X-API-Key': 'zAI65kxpNF2gJQfEpd6vP1ughBhwFu2UCZNVHwht',
