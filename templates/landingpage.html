@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Friendly FOIA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Need to submit a FOIA Request?</h1>
+    <h2>Friendly FOIA is here to help!</h2>
+    <div style="text-align: center">
+        <form>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for an agency.." name="agency">
+
+            <ul id="myUL">
+                <li><a href="#">NASA</a></li>
+                <li><a href="#">Department of Housing & Urban Development</a></li>
+
+                <li><a href="#">Department of Energy</a></li>
+                <li><a href="#">Department of Health & Human Services</a></li>
+            </ul>
+        </form>
+    </div>
+
+</body>
+
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName('li');
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</html>
