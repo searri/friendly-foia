@@ -44,7 +44,7 @@ def findagency():
     '''
     
     return (pageHead + 
-            '<h1>Need to submit a FOIA Request?</h1><h2>Friendly FOIA is here to help!</h2><div style="text-align: center"><form action="/findagency" method="POST"><select name="component">' + 
+            '<h1>Need to submit a FOIA Request?</h1><h2>Friendly FOIA is here to help!</h2><div style="text-align: center"><form action="/submitform" method="POST"><select name="component">' + 
             formOptions +
             submitBtn + 
             pageTail
