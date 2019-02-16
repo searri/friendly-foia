@@ -12,41 +12,18 @@
     <h1>Need to submit a FOIA Request?</h1>
     <h2>Friendly FOIA is here to help!</h2>
     <div style="text-align: center">
-        <form>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for an agency.." name="agency">
+        <form action="{{ url_for('findagency') }}" method="POST">
+            <select name="agency">
+                <option value="NASA"><a>NASA</a></option>
+                <option value="DHUD"><a>Department of Housing & Urban Development</a></option>
+                <option value="DE"><a>Department of Energy</a></option>
+                <option value="DHHS"><a>Department of Health & Human Services</a></option>
+            </select>
 
-            <ul id="myUL">
-                <li><a href="#">NASA</a></li>
-                <li><a href="#">Department of Housing & Urban Development</a></li>
-
-                <li><a href="#">Department of Energy</a></li>
-                <li><a href="#">Department of Health & Human Services</a></li>
-            </ul>
+            <input type="submit">
         </form>
     </div>
 
 </body>
-
-<script>
-    function myFunction() {
-        // Declare variables
-        var input, filter, ul, li, a, i, txtValue;
-        input = document.getElementById('myInput');
-        filter = input.value.toUpperCase();
-        ul = document.getElementById("myUL");
-        li = ul.getElementsByTagName('li');
-
-        // Loop through all list items, and hide those who don't match the search query
-        for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName("a")[0];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "";
-            } else {
-                li[i].style.display = "none";
-            }
-        }
-    }
-</script>
 
 </html>
