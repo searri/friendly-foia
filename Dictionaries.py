@@ -5,4 +5,4 @@ def getComponents(key):
     hhsComponents = {  'Office of the Assistant Secretary for Health':'34aed4e1-0e7f-4c81-8c8c-7ccfb7fc9cfb' ,  'Health Resources and Services Administration':'5dc313b1-b1f4-4818-b597-e1ee0e4c0a3e' ,  'Office of Deputy Assistant Secretary for Human Resources Management':'e039253f-7217-44ed-ada6-6847d6ecd06e' ,  'Office of Assistant Secretary for Human Resources and Administration':'3e37d281-d6bd-4cda-a865-fcfce2f52a2f' ,  'Public Health Service':'408b0a1b-d359-4eb0-8364-08044c89b5d8' ,  'Center for Medicare and Medicaid Services':'e07b59b9-db3b-4611-898d-23b42f7ead8d' ,  'Agency for Toxic Substances and Disease Registry':'f42e5f21-e345-4e05-9fe7-54aae43d83f8' ,  'Agency for Healthcare Research and Quality':'01547e92-881b-4bae-ae6f-32d94dc533b3'  }
     topLevelAgencies = { "NASA": nasaComponents ,  "HUD": hudComponents ,  "DOE": energyCompartments ,  "HHS": hhsComponents }
     compDict = topLevelAgencies.get(key)
-    return list(compDict.keys())
+    return compDict
