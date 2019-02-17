@@ -1,4 +1,5 @@
 import requests
+import json
 
 def doForm(id):
 	headers = {
@@ -6,3 +7,6 @@ def doForm(id):
 	}
 
 	response = requests.get('https://api.foia.gov/api/agency_components/' + id + '/request_form', headers=headers)
+	j = json.dumps(response.json())
+	jboi = json.loads(j)
+	print(jboi)

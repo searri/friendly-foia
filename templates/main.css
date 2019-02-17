@@ -1,0 +1,136 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+html,
+body {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+body {
+    margin: 20px;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto 35px;
+    max-width: 450px;
+}
+
+/* Actual code example */
+.form-field {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.form-field__label {
+    font-size: 0.75rem;
+    -webkit-transform: translateY(-14px);
+    transform: translateY(-14px);
+    display: block;
+    font-weight: normal;
+    left: 0;
+    margin: 0;
+    padding: 18px 12px 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.4s;
+    width: 100%;
+}
+
+.form-field__control {
+    background: #eee;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.form-field__bar {
+    border-bottom: 2px solid #b11adc;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: all 0.4s;
+    width: 1%;
+}
+
+.form-field__input,
+.form-field__textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #999;
+    color: #333;
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 24px;
+    outline: 0;
+    padding: 0 12px 10px 12px;
+    width: 100%;
+}
+
+.form-field__input:-ms-input-placeholder~.form-field__label,
+.form-field__textarea:-ms-input-placeholder~.form-field__label {
+    font-size: 1.2rem;
+    transform: translateY(0);
+}
+
+.form-field__input:placeholder-shown~.form-field__label,
+.form-field__textarea:placeholder-shown~.form-field__label {
+    font-size: 1.2rem;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.form-field__input:focus~.form-field__label,
+.form-field__textarea:focus~.form-field__label {
+    color: #b11adc;
+    font-size: 0.75rem;
+    -webkit-transform: translateY(-14px);
+    transform: translateY(-14px);
+}
+
+.form-field__input:focus~.form-field__bar,
+.form-field__textarea:focus~.form-field__bar {
+    border-bottom: 2px solid #b11adc;
+    -webkit-transform: scaleX(150);
+    transform: scaleX(150);
+}
+
+.form-field__textarea {
+    height: 150px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+}
+
+.card-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-1:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}

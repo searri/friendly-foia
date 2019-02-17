@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import Dictionaries
+import Dictionaries, requests, FormGetter
 app = Flask(__name__)
 
 pageHead = '''
@@ -52,6 +52,8 @@ def findagency():
 
 @app.route('/submitform', methods=['POST'])
 def submitform():
+    key = request.form['component']
+    FormGetter.doForm(key)
     return render_template('landingpage.html')
 
 if __name__ == '__main__':

@@ -4,20 +4,21 @@
 <head>
     <meta charset="utf-8">
     <title>Friendly FOIA</title>
-    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
 <body>
     <h1>Need to submit a FOIA Request?</h1>
-    <h4>Friendly FOIA is here to help!</h4>
+    <h2>Friendly FOIA is here to help!</h2>
     <div style="text-align: center">
         <div class="card card-1" style="width: 70%">
-            <form action="report.php" method="POST" style="text-align: left">
-                Select Federal Agency: <input type="text" name="agency"><br>
-                Request category: <input type="text" name="situation"><br>
-                Request description: <input type="text" name="situation"><br>
-                Attachments: <input type="text" name="desc"><br>
+            <form action="report.php" method="POST">
+                <!-- Select Federal Agency: <input type="text" name="agency"><br> -->
+                <!-- Request category: <input type="text" name="situation"><br> -->
+                <!-- Request description: <input type="text" name="situation"><br> -->
+                <!-- Attachments: <input type="text" name="desc"><br> -->
+                <br>
 
                 <div class="form-field">
                     <div class="form-field__control">
@@ -67,18 +68,89 @@
                     </div>
                 </div>
 
-                State/Province: <input type="text" name="state"><br>
-                Country: <input type="text" name="country"><br>
-                ZIP/Postal Code: <input type="text" name="zip"><br>
-                Company/Organization: <input type="text" name="company"><br>
-                Phone number: <input type="text" name="phone"><br>
-                Email: <input type="text" name="email"><br>
-                Fax Number: <input type="text" name="fax"><br>
-                Amount you are willing to pay: <input type="text" name="amount"><br>
-                Expedited Processing: <input type="text" name="expedited"><br>
-                Expedited Processing Explanation: <input type="text" name="expreditedexp"><br>
-                Fee waiver: <input type="text" name="waivertype"><br>
-                Fee waiver explanation: <input type="text" name="waiverexp"><br>
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="country" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">Country</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="zip" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">ZIP</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="company" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">Company/Organization</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="phone" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">Phone Number</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="email" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">Email</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="fax" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">Fax</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="amount" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">Amount you are willing to pay:</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="expedited" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">Expedited Processing</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="expeditedexp" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">Expedited Processing Explanation</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="expedited" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">Fee Waiver Type</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <div class="form-field__control">
+                        <input name="expeditedexp" type="text" class="form-field__input" value="" placeholder=" " />
+                        <label for="exampleField" class="form-field__label">Fee Waiver Explanation</label>
+                        <div class="form-field__bar"></div>
+                    </div>
+                </div>
+
                 <input type="submit" value="Submit FOIA">
             </form>
         </div>
